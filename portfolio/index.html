@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#16171d" />
     <meta name="description" content="NongFeen's portfolio and projects." />
-    <title>Portfolio | NongFeen</title>
+    <title>Portfolio | Teachin Pongmanee</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="projects.js" defer></script>
   </head>
   <body>
     <main class="portfolio">
@@ -16,37 +17,12 @@
       </header>
 
       <section aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projects</h2>
-        <div class="projects">
-          <!--
-            To add a project, copy one <article class="project"> block below.
-            - Put screenshots in the images/ folder and point src at them.
-            - Delete the <img> line if the project has no picture.
-            - Delete any link you don't need.
-          -->
-          <article class="project">
-            <img
-              class="project-image"
-              src="images/example.svg"
-              alt="Screenshot of Project title"
-              loading="lazy"
-            />
-            <div class="project-body">
-              <h3>Project title</h3>
-              <p class="project-description">
-                Short description of what you built and why.
-              </p>
-              <ul class="tags">
-                <li>React</li>
-                <li>TypeScript</li>
-              </ul>
-              <div class="project-links">
-                <a href="#">Live demo</a>
-                <a href="#">Source code</a>
-              </div>
-            </div>
-          </article>
+        <div class="section-heading">
+          <h2 id="projects-heading">Projects</h2>
+          <a class="view-all" href="projects/">View all &rarr;</a>
         </div>
+        <!-- Tiles come from projects.js (the ones marked featured: true). -->
+        <div class="project-grid" data-projects="featured" data-root=""></div>
       </section>
 
       <section class="section" aria-labelledby="about-heading">

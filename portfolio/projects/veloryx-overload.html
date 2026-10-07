@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16171d" />
+    <meta
+      name="description"
+      content="Veloryx Overload, a project by Teachin Pongmanee."
+    />
+    <title>Veloryx Overload | Teachin Pongmanee</title>
+    <!-- This page lives in projects/, so shared files are one folder up (../). -->
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../gallery.js" defer></script>
+  </head>
+  <body>
+    <main class="portfolio project-page">
+      <nav>
+        <a href="./">&larr; All projects</a>
+      </nav>
+
+      <header class="project-header">
+        <h1>Veloryx Overload</h1>
+      </header>
+
+      <!--
+        One <img> per screenshot. The alt text is shown as the caption.
+        Thumbnails are made automatically by gallery.js.
+      -->
+      <div class="project-media">
+        <div class="gallery">
+          <img
+            src="../images/veloryx/Main-menu.png"
+            alt="Main menu"
+            loading="lazy"
+          />
+          <img
+            src="../images/veloryx/Gameplay-Attack_dummy.png"
+            alt="Attacking a training dummy"
+            loading="lazy"
+          />
+          <img
+            src="../images/veloryx/Gameplay-Co-op.png"
+            alt="Co-op gameplay"
+            loading="lazy"
+          />
+          <img
+            src="../images/veloryx/Gameplay-Slime%20boss.png"
+            alt="Slime boss fight"
+            loading="lazy"
+          />
+          <img
+            src="../images/veloryx/In-Inventory.png"
+            alt="Inventory"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="project-meta">
+        <ul class="tags">
+          <li>Unity</li>
+          <li>2D</li>
+          <li>Multiplayer</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <section class="section project-about" aria-labelledby="details-heading">
+        <div class="about-intro">
+          <h2 id="details-heading">About this project</h2>
+          <p>
+            A 2D multiplayer top-down RPG made with Unity, with controller
+            support. Inspired by Destiny 2 and Soul Knight.
+          </p>
+          <p>
+            Semifinalist in the Central Region of the 2026 National Software
+            Contest (NSC), Thailand.
+          </p>
+          <p>Using A* pathfinding from arongranberg for enemy AI</p>
+          <p>All weapons and relics generate with random stats</p>
+          <p>
+            Built data driven skills and buffs system for easier in development
+          </p>
+          <p>Server-authoritative for projectiles with object pooling</p>
+          <p></p>
+        </div>
+
+        <!-- Images with data-zoom open full size when clicked. -->
+        <div class="feature">
+          <h3><span class="stat">5</span> playable classes</h3>
+          <p>13 skills across all classes, with a level cap of 30.</p>
+          <figure class="feature-figure">
+            <img
+              src="../images/veloryx/Info-Character-skills.gif"
+              alt="The five classes (Human, Priest, Ranger, Tank, Necro) and their skills"
+              loading="lazy"
+              data-zoom
+            />
+          </figure>
+        </div>
+
+        <div class="feature">
+          <h3><span class="stat">5</span> weapons</h3>
+          <figure class="feature-figure">
+            <!-- Cropped to the middle band of the image; click to see it all. -->
+            <img
+              src="../images/veloryx/Weapons.png"
+              alt="Weapons: Handgun, Burstfire, Buster, Ice Staff, A Salt Rifle"
+              loading="lazy"
+              data-zoom
+              style="
+                aspect-ratio: 1920 / 420;
+                object-fit: cover;
+                object-position: 50% 57%;
+              "
+            />
+          </figure>
+        </div>
+
+        <div class="feature">
+          <h3><span class="stat">3</span> relic rarities</h3>
+          <div class="relic-row">
+            <figure class="relic">
+              <img
+                src="../images/veloryx/Relic_common.png"
+                alt="Common relic"
+                loading="lazy"
+                data-zoom
+              />
+              <figcaption>Common</figcaption>
+            </figure>
+            <figure class="relic">
+              <img
+                src="../images/veloryx/Relic_Rare.png"
+                alt="Rare relic"
+                loading="lazy"
+                data-zoom
+              />
+              <figcaption>Rare</figcaption>
+            </figure>
+            <figure class="relic">
+              <img
+                src="../images/veloryx/Relic_Epic.png"
+                alt="Epic relic"
+                loading="lazy"
+                data-zoom
+              />
+              <figcaption>Epic</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="feature">
+          <h3><span class="stat">8</span> enemies, including 2 bosses</h3>
+          <figure class="feature-figure">
+            <img
+              src="../images/veloryx/Enemies.png"
+              alt="Enemies: Slime, Spike Slime, King Slime, Skeleton, Armored Skeleton, Proton, Overseer, Alien"
+              loading="lazy"
+              data-zoom
+              style="
+                aspect-ratio: 1920 / 760;
+                object-fit: cover;
+                object-position: 50% 50%;
+              "
+            />
+          </figure>
+        </div>
+
+        <div class="feature">
+          <h3><span class="stat">8</span> levels</h3>
+          <p>
+            Including a co-op-only raid level, inspired by Crota's bridge
+            encounter from Destiny 2.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <a href="./">&larr; All projects</a>
+      </footer>
+    </main>
+  </body>
+</html>

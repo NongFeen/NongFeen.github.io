@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16171d" />
+    <meta name="description" content="Sample project page." />
+    <title>Sample project | Teachin Pongmanee</title>
+    <!-- This page lives in projects/, so shared files are one folder up (../). -->
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../gallery.js" defer></script>
+  </head>
+  <body>
+    <main class="portfolio project-page">
+      <nav>
+        <a href="./">&larr; All projects</a>
+      </nav>
+
+      <header class="project-header">
+        <h1>Sample project</h1>
+      </header>
+
+      <!--
+        One <img> per screenshot. The alt text is shown as the caption.
+        Thumbnails are made automatically by gallery.js.
+      -->
+      <div class="project-media">
+        <div class="gallery">
+          <img src="../images/example.svg" alt="First screenshot" loading="lazy" />
+          <img src="../images/example-2.svg" alt="Second screenshot" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="project-meta">
+        <ul class="tags">
+          <li>Tag one</li>
+          <li>Tag two</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="details-heading">
+        <h2 id="details-heading">About this project</h2>
+        <p>
+          This is a placeholder page shared by the sample projects. To make a real one, copy
+          this file, rename it, and point a project in projects.js at it.
+        </p>
+      </section>
+
+      <footer>
+        <a href="./">&larr; All projects</a>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -13,10 +13,11 @@ const PROJECTS = [
     featured: true,
   },
   {
-    title: "Sample project 1",
-    summary: "Placeholder project. Replace me in projects.js.",
-    cover: "images/example.svg",
-    page: "projects/sample-project.html",
+    title: "Tap Titans 2 Raid Simulator",
+    summary:
+      "Raid simulator and deck recommender for my Tap Titans 2 clan.\nRust backend, React + TypeScript frontend.",
+    cover: "images/TT2Sims/Dashboard..png",
+    page: "projects/taptitan-raid-sims.html",
     featured: true,
   },
   {

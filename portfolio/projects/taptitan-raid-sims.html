@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16171d" />
+    <meta
+      name="description"
+      content="Tap Titans 2 raid simulator and deck recommender, a project by Teachin Pongmanee."
+    />
+    <title>Tap Titans 2 Raid Simulator | Teachin Pongmanee</title>
+    <!-- This page lives in projects/, so shared files are one folder up (../). -->
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../gallery.js" defer></script>
+  </head>
+  <body>
+    <main class="portfolio project-page">
+      <nav>
+        <a href="./">&larr; All projects</a>
+      </nav>
+
+      <header class="project-header">
+        <h1>Tap Titans 2 Raid Simulator</h1>
+      </header>
+
+      <!--
+        One <img> per screenshot. The alt text is shown as the caption.
+        Thumbnails are made automatically by gallery.js.
+      -->
+      <div class="project-media">
+        <div class="gallery">
+          <img
+            src="../images/TT2Sims/Dashboard..png"
+            alt="Clan dashboard"
+            loading="lazy"
+          />
+          <img
+            src="../images/TT2Sims/PlayerView.png"
+            alt="Deck recommendations for a player"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="project-meta">
+        <ul class="tags">
+          <li>Rust</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+        </ul>
+        <div class="project-links">
+          <a
+            href="https://feentoolsfrontend.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Live site</a
+          >
+          <a
+            href="https://github.com/NongFeen/TapTitan2RaidSims"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub (backend)</a
+          >
+          <a
+            href="https://github.com/NongFeen/FeenToolsFrontend"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub (frontend)</a
+          >
+        </div>
+      </div>
+
+      <section class="section project-about" aria-labelledby="details-heading">
+        <div class="about-intro">
+          <h2 id="details-heading">About this project</h2>
+          <p>
+            Raid boss simulator I built for my Tap Titans 2 clan. It simulates
+            raid card deck against the current state of raid boss using each
+            clan member's own stats, then recommends the set of decks that deals
+            the most damage.
+          </p>
+          <p>
+            Stays in sync with the live raid using game's api and Socket.IO.
+            when the boss changes, every player's simulations are queued again
+            automatically piority on player who not finished attack yet (6 per
+            cycle)
+          </p>
+        </div>
+
+        <!-- Images with data-zoom open full size when clicked. -->
+        <div class="feature">
+          <h3>Accurately sims all<span class="stat">44</span> raid cards</h3>
+          <p>
+            Every card's mechanics are implemented and work match in games does
+            include 14 affliction, 15 burst and 15 support cards, including
+            damage over time, stacking effects and boss part targeting.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>
+            Up to <span class="stat">13,244</span> decks per player (actually
+            around <span class="stat">8-9k</span> deck excludeing invalid
+            decks).
+          </h3>
+          <p>
+            Every 3-card combination is checked against card-pairing rules and
+            the current boss. Each deck that passes is simulated tick by tick
+            for 600 ticks over 20 times(default), with several attack patterns,
+            so the result reflects how the deck actually plays and card
+            behavior.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3><span class="stat">6</span> decks recommended</h3>
+          <p>
+            Players get the best set of decks with no duplicate cards, for the
+            current boss only or void phase. Limit data by using greedy method
+            for top 2048 decks then do branch and bound search to find best
+            combination
+          </p>
+          <figure class="feature-figure">
+            <img
+              src="../images/TT2Sims/PlayerView.png"
+              alt="Recommended decks for a player"
+              loading="lazy"
+              data-zoom
+            />
+          </figure>
+        </div>
+
+        <div class="feature">
+          <h3>Live raid dashboard</h3>
+          <p>
+            Connects to the game's live raid data with SocketIO to display
+            current boss, who is attacking, the attack log and card usage this
+            cycle, with a countdown to the next raid reset.
+          </p>
+          <figure class="feature-figure">
+            <img
+              src="../images/TT2Sims/Dashboard..png"
+              alt="Live raid dashboard"
+              loading="lazy"
+              data-zoom
+            />
+          </figure>
+        </div>
+
+        <div class="feature">
+          <h3>Checked against the real game</h3>
+          <p>
+            Golden tests run single attacks with every card forced to proc and
+            compare the damage, card by card, to numbers measured by hand in Tap
+            Titans 2.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Technical</h3>
+          <ul class="highlights">
+            <li>Rust backend (Axum, Tokio, SQLx) with PostgreSQL</li>
+            <li>
+              Simulations run as background jobs on a separate worker service
+            </li>
+            <li>Bitmask-based search to pick the best deck set quickly</li>
+            <li>Live raid events over WebSocket (Socket.IO)</li>
+            <li>
+              React + TypeScript frontend, deployed separately as a static site
+            </li>
+            <li>
+              Docker images and GitHub Actions builds and deploy with coolify on
+              Oracle Cloud Server
+            </li>
+          </ul>
+        </div>
+      </section>
+      <footer>
+        <a href="./">&larr; All projects</a>
+      </footer>
+    </main>
+  </body>
+</html>

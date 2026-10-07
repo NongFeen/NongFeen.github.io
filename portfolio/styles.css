@@ -417,6 +417,19 @@ a:focus-visible {
   font-weight: 600;
 }
 
+/* Bulleted list inside a feature block */
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.highlights li::marker {
+  color: var(--accent);
+}
+
 .feature-figure {
   margin: 8px 0 0;
   overflow: hidden;

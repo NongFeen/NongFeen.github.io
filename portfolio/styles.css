@@ -33,7 +33,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
+    --text: #ededee;
     --text-h: #f3f4f6;
     --bg: #16171d;
     --border: #2e303a;
@@ -151,7 +151,10 @@ a:focus-visible {
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--bg);
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .project:hover,

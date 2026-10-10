@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16171d" />
+    <meta
+      name="description"
+      content="Unfinished History, a 2D pixel-art platformer, a project by Teachin Pongmanee."
+    />
+    <title>Unfinished History | Teachin Pongmanee</title>
+    <!-- This page lives in projects/, so shared files are one folder up (../). -->
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../gallery.js" defer></script>
+    <script src="../sprites.js" defer></script>
+  </head>
+  <body>
+    <main class="portfolio project-page">
+      <nav>
+        <a href="./">&larr; All projects</a>
+      </nav>
+
+      <header class="project-header">
+        <h1>Unfinished History</h1>
+      </header>
+
+      <!--
+        One <img> per screenshot. The alt text is shown as the caption.
+        Thumbnails are made automatically by gallery.js.
+      -->
+      <div class="project-media">
+        <div class="gallery">
+          <img
+            src="../images/UnfinishHistory/Thumbnail.png"
+            alt="Main menu"
+            loading="lazy"
+          />
+          <img
+            src="../images/UnfinishHistory/PlayerStage%201.png"
+            alt="Stage 1"
+            loading="lazy"
+          />
+          <img
+            src="../images/UnfinishHistory/Boss1.png"
+            alt="Boss 1: Giant Slime"
+            loading="lazy"
+          />
+          <img
+            src="../images/UnfinishHistory/Boss2.png"
+            alt="Boss 2: Cerberus"
+            loading="lazy"
+          />
+          <img
+            src="../images/UnfinishHistory/Boss3.png"
+            alt="Boss 3: Rhulk"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="project-meta">
+        <ul class="tags">
+          <li>C#</li>
+          <li>MonoGame</li>
+          <li>2D</li>
+          <li>Pixel art</li>
+          <li>Team of 3</li>
+        </ul>
+        <div class="project-links">
+          <a
+            href="https://github.com/nlalert/Unfinished-History"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </div>
+
+      <section class="section project-about" aria-labelledby="details-heading">
+        <div class="about-intro">
+          <h2 id="details-heading">About this project</h2>
+          <p>
+            A 2D pixel-art action platformer built in C# with the MonoGame
+            framework. Made by a team of three.
+          </p>
+          <p>
+            The game contain tutorial prologue and three levels, each ending in
+            a boss fight. Player can run, jump, dash, climb ladders and vines,
+            in last level player also beable to swing across gaps with a
+            grappling hook, while fighting with fists, soul bullet. Player have
+            soul as resource to use bullet,dash, glide and grappling hook.
+          </p>
+          <p>
+            This project inspire Terraria, using song from
+            <a
+              href="https://www.youtube.com/watch?v=mnF-1epb304&list=PLIxrl_ipA4Es4tcXbmK_T5uRPv3d2jLf3"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Eternity's Divide OST</a
+            >
+          </p>
+          <!--
+            Animated sprites: played from the sprite sheet by sprites.js.
+            data-anims lists "name startColumn row frameCount", from the game's code
+            (add "once" to play an animation a single time).
+          -->
+          <div class="sprite-grid">
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Player"
+                  style="background-image: url(../images/UnfinishHistory/Char.png)"
+                  data-frame="80x64"
+                  data-sheet-width="1280"
+                  data-scale="3"
+                  data-fps="24"
+                  data-anims="run 0 1 8, jump 0 3 4, fall 4 3 4, glide 8 3 4, dash 0 6 4, crouch 0 7 16, crawl 0 8 8, roll 8 8 8, climb 0 13 8, punch 0 2 8, sword 8 4 8, idle 0 0 16"
+                ></div>
+              </div>
+              <figcaption>Player</figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- Images with data-zoom open full size when clicked. -->
+        <div class="feature">
+          <h2>What I did</h2>
+          <h3>Enemies and AI</h3>
+          <p>
+            I've built the base enemy class and its state-based AI: idle,
+            patrol, chase and line-of-sight detection.
+          </p>
+          <p>
+            I create enemy multiple enemy including Skeleton, Hellhound (spots
+            the player, charges and jumps over obstacles), Slime, Demon and
+            Tower that shooting bullet to player.
+          </p>
+          <div class="sprite-grid">
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Skeleton"
+                  style="background-image: url(../images/UnfinishHistory/Skeleton.png)"
+                  data-frame="64x64"
+                  data-sheet-width="512"
+                  data-fps="12"
+                  data-anims="idle 0 0 8, walk 0 1 8, die 0 2 6"
+                ></div>
+              </div>
+              <figcaption>Skeleton</figcaption>
+            </figure>
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Hellhound"
+                  style="background-image: url(../images/UnfinishHistory/HellHound.png)"
+                  data-frame="80x64"
+                  data-sheet-width="640"
+                  data-fps="24"
+                  data-anims="idle 0 0 8, charge 0 1 8, dash 0 2 4"
+                ></div>
+              </div>
+              <figcaption>Hellhound</figcaption>
+            </figure>
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Slime"
+                  style="background-image: url(../images/UnfinishHistory/HellSlime.png)"
+                  data-frame="48x48"
+                  data-sheet-width="384"
+                  data-scale="3"
+                  data-fps="12"
+                  data-anims="idle 0 0 8, charge 0 1 6, jump 0 2 5, land 0 4 5, die 0 5 7"
+                ></div>
+              </div>
+              <figcaption>Slime</figcaption>
+            </figure>
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Demon"
+                  style="background-image: url(../images/UnfinishHistory/Demon.png)"
+                  data-frame="80x64"
+                  data-sheet-width="640"
+                  data-fps="24"
+                  data-anims="idle 0 0 16, charge 0 2 4, charge idle 4 2 4"
+                ></div>
+              </div>
+              <figcaption>Demon</figcaption>
+            </figure>
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Tower"
+                  style="background-image: url(../images/UnfinishHistory/Spitter.png)"
+                  data-frame="48x48"
+                  data-sheet-width="384"
+                  data-scale="3"
+                  data-fps="12"
+                  data-anims="idle 0 1 4, charge 0 0 8, shoot 0 2 11, die 4 3 4"
+                ></div>
+              </div>
+              <figcaption>Tower</figcaption>
+            </figure>
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Crab platform"
+                  style="background-image: url(../images/UnfinishHistory/Crab.png)"
+                  data-frame="80x64"
+                  data-sheet-width="640"
+                  data-fps="24"
+                  data-anims="walk 0 2 8, idle 0 0 16"
+                ></div>
+              </div>
+              <figcaption>Crab platform</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="feature">
+          <h3>All <span class="stat">3</span> bosses</h3>
+          <p>
+            I also create 3 bosses Giant Slime, Cerberus and Rhulk, each with
+            its own AI and attack patterns. I also fixed exploits on boss, such
+            as standing next to a wall to dodge every attack.
+          </p>
+          <div class="sprite-grid">
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Giant Slime"
+                  style="background-image: url(../images/UnfinishHistory/LargeSlime_Boss1.png)"
+                  data-frame="96x80"
+                  data-sheet-width="576"
+                  data-fps="24"
+                  data-anims="idle 0 0 4, charge 0 1 3, jump 0 2 5, land 0 3 6, fly 0 4 6"
+                ></div>
+              </div>
+              <figcaption>Giant Slime</figcaption>
+            </figure>
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Cerberus"
+                  style="background-image: url(../images/UnfinishHistory/Cerberus_Boss2.png)"
+                  data-frame="96x80"
+                  data-sheet-width="768"
+                  data-fps="24"
+                  data-anims="idle 0 0 8, charge 0 1 8, dash 0 3 2, run 0 4 3, shadow charge 0 2 8, shadow run 3 4 3"
+                ></div>
+              </div>
+              <figcaption>Cerberus</figcaption>
+            </figure>
+            <figure class="sprite-card">
+              <div class="sprite-stage">
+                <div
+                  class="sprite"
+                  role="img"
+                  aria-label="Rhulk"
+                  style="background-image: url(../images/UnfinishHistory/Rhulk_Boss3.png)"
+                  data-frame="64x96"
+                  data-sheet-width="384"
+                  data-fps="12"
+                  data-anims="idle 0 0 12, run 0 2 6"
+                ></div>
+              </div>
+              <figcaption>Rhulk</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="feature">
+          <h3>Projectiles and level mechanics</h3>
+          <p>
+            - Projectile base class used by every bullet, Soul bullet ,enemy
+            fireball and laser
+          </p>
+          <p>- grappling hook</p>
+          <p>- soul minions on staff</p>
+          <p>- tutorial signs.</p>
+          <div class="relic-row">
+            <figure class="relic">
+              <img
+                class="pixel-art"
+                src="../images/UnfinishHistory/Projectile.png"
+                alt="Projectile sprites"
+                loading="lazy"
+                data-zoom
+                style="width: 160px; height: 160px"
+              />
+              <figcaption>Projectiles</figcaption>
+            </figure>
+            <figure class="relic">
+              <img
+                class="pixel-art"
+                src="../images/UnfinishHistory/SoulStaff.png"
+                alt="Soul Staff"
+                loading="lazy"
+                data-zoom
+                style="width: 116px; height: 116px"
+              />
+              <figcaption>Soul Staff</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="feature">
+          <h3>Menus, sound and music</h3>
+          <p>
+            The pause, settings, game over and game clear screens with volume
+            sliders, every enemy and boss sound effect, music for each stage,
+            and final item balancing.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <a href="./">&larr; All projects</a>
+      </footer>
+    </main>
+  </body>
+</html>

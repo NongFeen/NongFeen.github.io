@@ -21,25 +21,19 @@ const PROJECTS = [
     featured: true,
   },
   {
-    title: "Sample project 2",
-    summary: "Placeholder project. Replace me in projects.js.",
-    cover: "images/example-2.svg",
-    page: "projects/sample-project.html",
-    featured: true,
-  },
-  {
-    title: "Sample project 3",
-    summary: "Placeholder project. Replace me in projects.js.",
-    cover: "images/example.svg",
-    page: "projects/sample-project.html",
-    featured: true,
-  },
-  {
-    title: "Sample project 4",
+    title: "Unfinished History",
     summary:
-      "Only on the All projects page: the main page shows the first 4 featured.",
-    cover: "images/example-2.svg",
-    page: "projects/sample-project.html",
+      "2D pixel-art action platformer made with MonoGame (C#).\nComputer Game Programming final project, team of 3.",
+    cover: "images/UnfinishHistory/Thumbnail.png",
+    page: "projects/unfinished-history.html",
+    featured: true,
+  },
+  {
+    title: "Chip Dealer",
+    summary:
+      "Casino-themed Puzzle Bobble with poker chips, made with MonoGame (C#).\nClass midterm project, team of 3.",
+    cover: "images/ChipDealer/Menu.png",
+    page: "projects/chip-dealer.html",
     featured: true,
   },
 ];

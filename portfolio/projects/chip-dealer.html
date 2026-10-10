@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16171d" />
+    <meta
+      name="description"
+      content="Chip Dealer, a casino-themed puzzle game, a project by Teachin Pongmanee."
+    />
+    <title>Chip Dealer | Teachin Pongmanee</title>
+    <!-- This page lives in projects/, so shared files are one folder up (../). -->
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../gallery.js" defer></script>
+  </head>
+  <body>
+    <main class="portfolio project-page">
+      <nav>
+        <a href="./">&larr; All projects</a>
+      </nav>
+
+      <header class="project-header">
+        <h1>Chip Dealer</h1>
+      </header>
+
+      <!--
+        One <img> per screenshot. The alt text is shown as the caption.
+        Thumbnails are made automatically by gallery.js.
+        class="pixel-art" keeps small pixel-art screenshots sharp when enlarged.
+      -->
+      <div class="project-media">
+        <div class="gallery">
+          <img
+            class="pixel-art"
+            src="../images/ChipDealer/Menu.png"
+            alt="Main menu"
+            loading="lazy"
+          />
+          <img
+            class="pixel-art"
+            src="../images/ChipDealer/GamePlay.png"
+            alt="Gameplay"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="project-meta">
+        <ul class="tags">
+          <li>C#</li>
+          <li>MonoGame</li>
+          <li>2D</li>
+          <li>Pixel art</li>
+          <li>Team of 3</li>
+        </ul>
+        <div class="project-links">
+          <a
+            href="https://github.com/nlalert/Chip-Dealer"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </div>
+
+      <section class="section project-about" aria-labelledby="details-heading">
+        <div class="about-intro">
+          <h2 id="details-heading">About this project</h2>
+          <p>
+            A 2D pixel-art puzzle game inspired by Puzzle Bobble, with a casino
+            twist, you pay 1 dollar each shot try to collect all the chips in
+            each level and clear the board. Built in C# with the MonoGame
+            framework (January to February 2025), by a team of three.
+          </p>
+          <p>
+            Each turn, a slot machine lets you bet for reward chips, after
+            complete level there's a shop sells special chips and relics that
+            change how you play, such as a longer aim line, special chips that
+            can be use or permanent upgrades to reduce shop prices.
+          </p>
+        </div>
+
+        <!-- Images with data-zoom open full size when clicked. -->
+        <div class="feature">
+          <h2>What I did</h2>
+          <h3>- Create and Design Game Manager, Button and Singleton</h3>
+          <h3>- Overhaul Mainmenu and add Scoreboard</h3>
+          <h3>- Create Leaderboard</h3>
+          <h3>- Pause menu, Settings and Volume control</h3>
+          <h3>- Aim Guide Line</h3>
+          <h3>- Move all texture to a single sprite sheet</h3>
+          <h3>- Game flow : Game over, Restart and Win</h3>
+          <h3>- Explosive chips mechanic</h3>
+          <h3>- Shooting Core Mechanic</h3>
+          <p>
+            The core chip shooting: bouncing off the walls, the aim line,
+            detecting the hit angle and snapping each chip into the board's
+            grid, and showing the next chip (later got some bug fixed from
+            teammate).
+          </p>
+          <figure class="feature-figure">
+            <img
+              class="pixel-art"
+              src="../images/ChipDealer/GamePlay.png"
+              alt="Aiming a chip with the guide line"
+              loading="lazy"
+              data-zoom
+            />
+          </figure>
+        </div>
+      </section>
+      <footer>
+        <a href="./">&larr; All projects</a>
+      </footer>
+    </main>
+  </body>
+</html>

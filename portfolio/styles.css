@@ -484,6 +484,58 @@ a:focus-visible {
   font-weight: 600;
 }
 
+/* Animated sprite sheets (driven by sprites.js) */
+
+.sprite-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.sprite-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Box the character stands in, so every card lines up on the same floor */
+.sprite-stage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 140px;
+  min-height: 140px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--code-bg);
+}
+
+/* Size comes from the frame size; sprites.js moves the background frame by frame */
+.sprite {
+  width: calc(var(--fw) * var(--scale) * 1px);
+  height: calc(var(--fh) * var(--scale) * 1px);
+  background-repeat: no-repeat;
+  background-size: calc(var(--sheet-w) * var(--scale) * 1px) auto;
+  background-position: 0 0;
+  image-rendering: pixelated;
+}
+
+.sprite-card figcaption {
+  color: var(--text-h);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Small pixel-art images shown enlarged without blurring */
+.pixel-art {
+  image-rendering: pixelated;
+}
+
 /* Tags on the left, GitHub link on the right */
 .project-meta {
   display: flex;

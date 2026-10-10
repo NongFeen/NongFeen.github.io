@@ -570,6 +570,87 @@ a:focus-visible {
   font-size: 16px;
 }
 
+/* About me */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about h2 {
+  margin: 0;
+}
+
+.about-name {
+  color: var(--text-h);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+.nickname {
+  color: var(--accent);
+}
+
+.about-role {
+  font-size: 16px;
+}
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.about-block h3 {
+  margin: 0;
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.achievements li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.rank {
+  min-width: 64px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.achievement-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-h);
+}
+
+.achievement-text small {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.about-subtle,
+.about-links {
+  font-size: 15px;
+}
+
 /* Plain bordered section (About, Contact) */
 
 .section {
